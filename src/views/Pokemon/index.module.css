@@ -1,6 +1,7 @@
 .pokemon {
   display: flex;
 
+  grid-column: 2 / 3;
   align-items: center;
   justify-content: center;
 }

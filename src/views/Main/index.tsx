@@ -3,6 +3,8 @@ import { useState } from "react";
 import PokemonList from "../PokemonList";
 import Pokemon from "../Pokemon";
 
+import PokemonSearch from "../../components/PokemonSearch";
+
 import styles from "./index.module.css";
 
 const Main = () => {
@@ -16,6 +18,7 @@ const Main = () => {
 
   return (
     <main className={styles.main}>
+      <PokemonSearch />
       <PokemonList
         clickHandler={onClickHandler}
         currentPokemon={currentPokemon}

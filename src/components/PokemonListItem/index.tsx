@@ -13,7 +13,6 @@ const PokemonListItem = ({
   currentPokemon,
   clickHandler,
 }: PokemonListItemProps) => {
-  console.log(currentPokemon);
   return (
     <div
       id={getIdfromURL(pokemon.url)}
