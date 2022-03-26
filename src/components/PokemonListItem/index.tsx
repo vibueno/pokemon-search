@@ -1,11 +1,29 @@
+import { getIdfromURL } from "../../utils";
+
 import styles from "./index.module.css";
 
 type PokemonListItemProps = {
   pokemon: Pokemon;
+  currentPokemon: number;
+  clickHandler: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
-const PokemonListItem = ({ pokemon }: PokemonListItemProps) => {
-  return <div className={styles.pokemonListItem}>{pokemon.name}</div>;
+const PokemonListItem = ({
+  pokemon,
+  currentPokemon,
+  clickHandler,
+}: PokemonListItemProps) => {
+  console.log(currentPokemon);
+  return (
+    <div
+      id={getIdfromURL(pokemon.url)}
+      className={styles.pokemonListItem}
+      onClick={clickHandler}
+      data-selected={parseInt(getIdfromURL(pokemon.url)) === currentPokemon}
+    >
+      {pokemon.name}
+    </div>
+  );
 };
 
 export default PokemonListItem;

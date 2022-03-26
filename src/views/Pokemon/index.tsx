@@ -2,10 +2,14 @@ import PokemonCard from "../../components/PokemonCard";
 
 import styles from "./index.module.css";
 
-const Pokemon = () => {
+type PokemonProps = {
+  id: number;
+};
+
+const Pokemon = ({ id }: PokemonProps) => {
   return (
     <div className={styles.pokemon}>
-      <PokemonCard id={1} />
+      <PokemonCard id={id} />
     </div>
   );
 };

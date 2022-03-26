@@ -9,3 +9,5 @@ type PokemonData = {
   base_experience: number;
   height: number;
 };
+
+type PokemonList = [Pokemon];
