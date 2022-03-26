@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 type PokemonListItemProps = {
   pokemon: Pokemon;
   currentPokemon: number;
-  clickHandler: (e: React.MouseEvent<HTMLDivElement>) => void;
+  clickHandler: (e: React.MouseEvent<HTMLLIElement>) => void;
 };
 
 const PokemonListItem = ({
@@ -14,14 +14,14 @@ const PokemonListItem = ({
   clickHandler,
 }: PokemonListItemProps) => {
   return (
-    <div
+    <li
       id={getIdfromURL(pokemon.url)}
       className={styles.pokemonListItem}
       onClick={clickHandler}
       data-selected={parseInt(getIdfromURL(pokemon.url)) === currentPokemon}
     >
       {pokemon.name}
-    </div>
+    </li>
   );
 };
 

@@ -1,5 +1,9 @@
 .pokemonList {
+  height: fit-content;
+  padding: 0;
+
   border: 1px solid black;
+  border-bottom: none;
 
   grid-column: 1 / 2;
 }

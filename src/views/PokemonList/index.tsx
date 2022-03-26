@@ -5,7 +5,7 @@ import PokemonListItem from "../../components/PokemonListItem";
 type PokemonListProps = {
   pokemonList: Pokemon[];
   currentPokemon: number;
-  clickHandler: (e: React.MouseEvent<HTMLDivElement>) => void;
+  clickHandler: (e: React.MouseEvent<HTMLLIElement>) => void;
 };
 
 const PokemonList = ({
@@ -14,7 +14,7 @@ const PokemonList = ({
   clickHandler,
 }: PokemonListProps) => {
   return (
-    <div className={styles.pokemonList}>
+    <ul className={styles.pokemonList}>
       {pokemonList &&
         pokemonList.map((pokemon: Pokemon, index: number) => (
           <PokemonListItem
@@ -24,7 +24,7 @@ const PokemonList = ({
             clickHandler={clickHandler}
           />
         ))}
-    </div>
+    </ul>
   );
 };
 
